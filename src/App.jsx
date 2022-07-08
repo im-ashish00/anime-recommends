@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Cards } from './Components/Cards';
+import { Pagination } from './Components/Pagination';
 
 function App() {
   //managing anime objects in one single call
@@ -35,6 +36,7 @@ function App() {
         Top Anime Recommendations
       </div>
       <Cards animes={animeArray} />
+      <Pagination />
     </div>
   );
 }
