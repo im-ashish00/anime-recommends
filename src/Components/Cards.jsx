@@ -21,13 +21,13 @@ export const Cards = ({ animes }) => {
               <img
                 className="card-img-top"
                 src={anime.image}
-                alt="Card image cap"
-                style={{ maxHeight: '300px' }}
+                alt={anime.title}
+                style={{ maxHeight: '250px' }}
               />
               <div className="card-body">
                 <p className="card-text">{anime.title}</p>
                 <a
-                  href={anime.link}
+                  href={`https://youtu.be/` + anime.id}
                   class="btn btn-outline-primary"
                   target="_blank"
                 >
