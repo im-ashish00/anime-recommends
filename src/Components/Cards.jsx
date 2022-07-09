@@ -4,11 +4,13 @@ export const Cards = ({ animes }) => {
   return (
     <div className="text-center">
       <div
-        className="container my-3"
+        className="container mx-1"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(200px, auto)',
+          justifyContent: 'center',
           textAlign: 'center',
+          gap: '10px',
         }}
       >
         {animes.map((anime) => {
@@ -16,7 +18,7 @@ export const Cards = ({ animes }) => {
             <div
               key={anime.title}
               className="card my-3 bg-light"
-              style={{ width: '16rem' }}
+              style={{ width: '13rem' }}
             >
               <img
                 className="card-img-top"

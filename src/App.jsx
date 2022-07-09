@@ -10,7 +10,7 @@ function App() {
     'https://kitsu.io/api/edge/anime'
   );
   //handling pages number
-  const [pageNumber, setPageNumber] = useState(0);
+  const [pageNumber, setPageNumber] = useState(10);
 
   //handling the loading
   const [loading, setLoading] = useState(false);

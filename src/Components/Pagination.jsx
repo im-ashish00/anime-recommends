@@ -3,7 +3,7 @@ import React from 'react';
 export const Pagination = ({ pageNumber, goToNextPage, goToPreviousPage }) => {
   return (
     <div className="container text-center mb-3">
-      {pageNumber === 0 ? (
+      {pageNumber === 10 ? (
         <div></div>
       ) : (
         <button
