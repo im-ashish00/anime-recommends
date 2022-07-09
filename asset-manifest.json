@@ -1,4 +1,10 @@
 {
-  "main.js": "static/js/main.69a284e1.js",
-  "main.js.map": "static/js/main.69a284e1.js.map"
+  "files": {
+    "main.js": "/anime-recommends/static/js/main.2b5223f9.js",
+    "index.html": "/anime-recommends/index.html",
+    "main.2b5223f9.js.map": "/anime-recommends/static/js/main.2b5223f9.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.2b5223f9.js"
+  ]
 }
