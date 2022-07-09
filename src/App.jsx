@@ -59,11 +59,13 @@ function App() {
     );
   }
   function goToPreviousPage() {
-    setPageNumber((prev) => (prev -= 10));
+    setPageNumber((prev) => {
+      if (prev === 0) return 0;
+      return (prev -= 10);
+    });
     setCurrentUrl(
       `https://kitsu.io/api/edge/anime?page%5Blimit%5D=10&page%5Boffset%5D=${pageNumber}`
     );
-    console.log(currentUrl);
   }
 
   // loading condition
@@ -77,7 +79,10 @@ function App() {
           className="d-flex justify-content-center align-items-center"
           style={{ minHeight: '80vh' }}
         >
-          <img src="https://thumbs.gfycat.com/CarefreeFriendlyGuineapig-size_restricted.gif" />
+          <img
+            src="https://thumbs.gfycat.com/CarefreeFriendlyGuineapig-size_restricted.gif"
+            alt="loading..."
+          />
         </div>
       </div>
     );
@@ -89,6 +94,7 @@ function App() {
       </div>
       <Cards animes={animeArray} />
       <Pagination
+        pageNumber={pageNumber}
         goToNextPage={goToNextPage}
         goToPreviousPage={goToPreviousPage}
       />
